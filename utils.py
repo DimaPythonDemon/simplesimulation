@@ -42,15 +42,13 @@ def print_text(surface, text, font, color="tomato", coords=None):
 
     surface.blit(text_surface, rect)
 
+
 def draw_rectangle(surface, color=(0, 0, 0), params=(0, 0, 0, 0), param2=0):
     pygame.draw.rect(surface, color, params, param2)
+
 
 def check_zone(obj_location: list, mouse_location: list, obj_radius: int):
     obj_radius += 3
     if mouse_location[0] > obj_location[0] - obj_radius and mouse_location[0] < obj_location[0] + obj_radius and mouse_location[1] > obj_location[1] - obj_radius and mouse_location[1] < obj_location[1] + obj_radius:
         return True
     return False
-
-def some_vector_angle_func():
-    pass
-
